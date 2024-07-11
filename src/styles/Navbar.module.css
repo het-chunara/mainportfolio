@@ -1,0 +1,68 @@
+/* Navbar.module.css */
+
+/* Navbar container */
+.navbar {
+  width: 100%;
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* To position the absolute navList */
+  z-index: 1;
+  /* Ensure the navbar is above other elements */
+}
+
+/* Navbar list */
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin: 0;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: #ff7e5f;
+}
+
+/* Menu icon for mobile view */
+.menuIcon {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navList {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .navList.active {
+    display: flex;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+}

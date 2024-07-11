@@ -1,0 +1,103 @@
+/* Container for the Blog page */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f5f5f5;
+    /* Light background color */
+    color: #333;
+    /* Dark text color */
+}
+
+/* Title styling */
+.title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
+    /* Dark color for the title */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Description styling */
+.description {
+    font-size: 1.2rem;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+    /* Slightly lighter color for description text */
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Blog posts list styling */
+.postsList {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 800px;
+}
+
+.postItem {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.postItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Blog post title styling */
+.postTitle {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+    /* Dark color for post titles */
+}
+
+/* Blog post excerpt styling */
+.postExcerpt {
+    font-size: 1rem;
+    color: #666;
+    /* Light color for post excerpts */
+}
+
+/* Blog post date styling */
+.postDate {
+    font-size: 0.9rem;
+    color: #999;
+    /* Gray color for post dates */
+    margin-top: 10px;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
